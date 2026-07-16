@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "python3 -m http.server 5173 -d public",
+    "build": "rm -rf dist && tsc && cp -R public dist && cp -R build dist/assets",
+    "test": "tsc && node --test build/**/*.test.js",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=20"
+  },
+  "private": true,
+  "type": "module"
+}
